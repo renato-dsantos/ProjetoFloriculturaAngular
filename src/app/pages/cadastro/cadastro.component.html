@@ -1,1 +1,40 @@
-<p>cadastro works!</p>
+<body>
+
+  <div class="conteiner">
+
+    <form action="../../../src/components/tela-cadastro/produtos.html">
+
+
+      <img src="src/assets/img/logo.svg" alt="logo floricultura">
+
+      <button type="reset">Cancelar</button>
+      <button type="submit" href="../../../src/components/tela-cadastro/produtos.html">Salvar</button>
+
+
+      <div class="formulario">
+        <h2>Cadastro de produto</h2>
+
+        <label for="txtNomeProd">Nome</label>
+        <input type="text" id="txtNomeProd" placeholder="Nome do produto" required>
+
+        <label for="txtTipoProd">Tipo</label>
+        <input type="text" id="txtTipoProd" placeholder="Tipo do produto" required><br>
+
+        <label for="txtPreco">Preço</label>
+        <input type="number" id="txtPreco" placeholder="Preço do pedido" required>
+
+        <label for="txtQuantd">Quantidade</label>
+        <input type="number" id="txtQuantd" placeholder="Quantidade" required>
+
+        <label for="prodImg">Imagem do produto</label>
+        <input type="file" id="prodImg" accept="image/*" required>
+        <br>
+
+        <label for="txtDescricaoProd">Descrição do produto:</label> <br>
+        <textarea id="txtDescricaoProd" name="descricao" placeholder="Descrição do produto.." required></textarea>
+
+      </div>
+
+    </form>
+  </div>
+</body>
