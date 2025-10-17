@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  itensMenu = [
+    { label: 'Home', link: ''},
+    { label: 'Favorito', link: '/favorito' },
+    { label: 'Login', link: '/login' },
+    ]
 
 }

@@ -1,0 +1,22 @@
+<header>
+    <!-- <div class="navheader"> -->
+    <img class="logo" src="assets/img/logo.png" alt="Logo Jardim 
+        Real">
+    <div class="search-bar">
+        <i class="ph ph-magnifying-glass"></i>
+        <input type="text" placeholder="Buscar...">
+    </div>
+    <nav class="user">
+        <ul class="navbar-list">
+            @for (item of itensMenu; track item){
+            <li class="navbar-item" routerLink="{{item.link}}" >
+            <a>{{item.label}}</a>
+            </li>
+            }
+            </ul>
+    </nav>
+
+    <!-- </div> -->
+
+</header>
+<router-outlet />
