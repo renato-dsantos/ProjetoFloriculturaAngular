@@ -1,0 +1,115 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    /* O fundo da página agora é branco */
+    background-color: #ffffff; 
+    color: #333;
+}
+
+/* Container principal da página agora ocupa 100% */
+.page-container {
+    width: 100%;
+    min-height: 100vh; /* Garante que o container ocupe no mínimo a altura total da tela */
+    padding: 20px 40px; /* Mantém um espaçamento interno para o conteúdo não colar nas bordas */
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Logo */
+.logo img {
+    max-height: 80px;
+    display: block;
+}
+
+/* Barra de Busca */
+.search-bar {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 40px;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0;
+}
+
+.search-bar i {
+    font-size: 1.2rem;
+    color: #888;
+    margin-right: 10px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.search-bar input::placeholder {
+    color: #aaa;
+}
+
+/* Ícones de Ação (Favoritos, Usuário, Carrinho) */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Espaçamento entre os ícones */
+}
+
+.action-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 1.5rem; /* Tamanho dos ícones */
+    transition: color 0.3s ease;
+}
+
+.action-button:hover {
+    color: #000;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    display: flex;
+    margin-top: 20px;
+}
+
+/* Barra Lateral */
+.sidebar {
+    flex: 0 0 200px; /* Base fixa de 200px, não cresce, não encolhe */
+    border-right: 1px solid #e0e0e0;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+.sidebar p {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Área de Conteúdo da Direita */
+.content-area {
+    flex-grow: 1;
+    padding-left: 30px;
+}
+
+.favorites-message {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content-placeholder {
+    background-color: #f0f0f0;
+    width: 100%;
+    height: 400px; /* Altura de exemplo */
+    border-radius: 8px;
+}
