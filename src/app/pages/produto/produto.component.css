@@ -50,21 +50,36 @@ img{
 }
 
 button{	
+	margin:10px;
+	background-color: #D9D9D9;
+	border: none;
+	border-radius: 10px;
+	color: grey;
+	font-size: 10px; 
+	padding: 4px 10px 4px 10px;
+	justify-content:center;
+	
+}
+
+.btncadastrar{
 	float: right;
 	margin:-20px 20px 0px 0px;
 	background-color: #D9D9D9;
 	border: none;
 	border-radius: 10px;
-	color: grean;
+	color: grey;
 	font-size: 10px; 
-	padding: 4px 10px 4px 10px;			
-  	
+	padding: 4px 10px 4px 10px;
+	text-align: center;
+	vertical-align: middle;
+	
 }
    
   
     
 table{
 width:100%;
+
 }
 
 tr{
@@ -76,17 +91,19 @@ th{
  
       padding: 5px 30px 5px 26px;
       border-bottom: 1px solid #eee;
-      margin: 100px;
+      /*margin: 100px;*/
 	  color:	#D9D9D9;	
-    }
+}
 
-	td{      
+td{      
  
-      padding: 5px 30px 5px 26px;
-      border-bottom: 1px solid #eee;
-      margin: 100px;
-	  color:black;	
-    }
+	padding: 5px 30px 5px 26px;
+	border-bottom: 1px solid #eee;
+	 /*margin: 100px;*/
+	color:black;	
+	text-align: center;
+	vertical-align: middle;
+ }
 
 
 input[type="search"]{

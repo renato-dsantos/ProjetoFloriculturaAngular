@@ -15,7 +15,7 @@
 
 			<input type="search" id="txtBuscarProd" placeholder="Buscar produto">
 
-			<button type="button" href="cadastro.html" routerLink="/cadastro">Cadastrar</button>
+			<button class="btncadastrar" type="button" href="cadastro.html" routerLink="/cadastro">Cadastrar</button>
 
 
 
@@ -30,24 +30,21 @@
 							<th>Quantidade</th>
 							<th>Gerenciar</th>
 						</tr>
-						<tr>
-						<td>Buquê rosas e lírios</td>
-						<td>flores/Buquê</td>
-						<td>R$80,00</td>
-						<td>2</td>
-						<td>
-							<button class="btneditar">Editar</button>
-							<button class="btnexcluir">Excluir</button>
-						</td>
-						<tr>
-						<td>Buquê rosas e lírios</td>
-						<td>flores/Buquê</td>
-						<td>R$80,00</td>
-						<td>2</td>
-						<td>
-							<button class="btneditar">Editar</button>
-							<button class="btnexcluir">Excluir</button>
-						</td>														
+						<tbody>
+								@for (produto of listarProduto; track produto){
+									<tr>
+									<td>{{produto.id}}</td>
+									<td>{{produto.nome}}</td>
+									<td>{{produto.preco}}</td>
+									<td>{{produto.quantidade}}</td>
+									<td>
+										<button class="btneditar" [routerLink]="['cadastro', produto.id]">Editar</button>
+										<button class="btnexcluir">Excluir</button>
+									</td>
+								}
+						</tbody>		
+						
+						
 					</table>
 				</div>
 

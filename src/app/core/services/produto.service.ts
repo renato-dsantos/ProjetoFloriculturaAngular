@@ -25,7 +25,15 @@ export class ProdutoService {
         preco: 20.00,
         quantidade: 2,
         descricao: "Flores cravo" 
-      }
+      },
+      {
+        id: 2,
+        nome: "Buquê cravo",
+        tipo: "Flores",
+        preco: 20.00,
+        quantidade: 2,
+        descricao: "Flores cravo" 
+      },
     ]
   }
 }
