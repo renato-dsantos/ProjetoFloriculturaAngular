@@ -1,0 +1,29 @@
+
+
+{"produto":[
+    {
+        "id": 1,
+        "nome": "Buquê rosas",
+        "tipo": "Flores",
+        "preco": 10.00,
+        "quantidade": 2,
+        "descricao": "Flores rosas" 
+      },
+        {
+        "id": 2,
+        "nome": "Buquê cravo",
+        "tipo": "Flores",
+        "preco": 20.00,
+        "quantidade": 2,
+        "descricao": "Flores cravo" 
+      },
+      {
+        "id": 3,
+        "nome": "Buquê cravo",
+        "tipo": "Flores",
+        "preco": 20.00,
+        "quantidade": 2,
+        "descricao": "Flores cravo" 
+      }
+    ] 
+}      

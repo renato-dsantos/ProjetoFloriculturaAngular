@@ -20,3 +20,36 @@ export class ProdutoComponent implements OnInit{
   }
 
 }
+
+
+/** Teste
+ * export class ProdutoComponent implements OnInit{
+ * 
+ *    listarProduto: Produto[] = [];
+ *    
+*     constructor(
+*         private service: ProdutoService,
+*         private router: Router     
+*     ){}
+*     
+*     ngOnInit(): void {
+        this.service.listar().subscribe((produto)=>{
+          this.listaProduto = produto;
+        });      
+      }
+
+      excluir(id:number){
+        if(id){
+          this.service.excluir(id).subscribe(() =>{
+              window.location.reload()
+          })
+        }
+      }
+*   
+ * 
+ * 
+ * 
+ * }
+ * 
+ * 
+ */
