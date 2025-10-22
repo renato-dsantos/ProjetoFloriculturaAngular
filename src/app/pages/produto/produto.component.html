@@ -32,7 +32,7 @@
 							<th>Gerenciar</th>
 						</tr>
 						<tbody>
-								@for (produto of listarProduto; track produto){
+								@for (produto of listaProduto; track produto){
 									<tr>
 									<td>{{produto.id}}</td>
 									<td>{{produto.nome}}</td>
@@ -41,7 +41,7 @@
 									<td>{{produto.quantidade}}</td>
 									<td>
 										<button class="btneditar" [routerLink]="['cadastro', produto.id]">Editar</button>
-										<button class="btnexcluir" (click)="excluir(produto.id)">Excluir</button>
+										<button class="btnexcluir" (click)="excluir(produto.id!)">Excluir</button>
 									</td>
 								}
 						</tbody>		

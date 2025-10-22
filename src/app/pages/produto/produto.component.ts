@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink, RouterModule } from '@angular/router';
+import { Router, RouterLink, RouterModule } from '@angular/router';
 import { Produto } from '../../core/types/types';
 import { ProdutoService } from '../../core/services/produto.service';
 
@@ -9,7 +9,7 @@ import { ProdutoService } from '../../core/services/produto.service';
   templateUrl: './produto.component.html',
   styleUrl: './produto.component.css'
 })
-export class ProdutoComponent implements OnInit{
+/*export class ProdutoComponent implements OnInit{
 [x: string]: any;
 
   listarProduto: Produto[] = [];
@@ -19,20 +19,20 @@ export class ProdutoComponent implements OnInit{
     this.listarProduto = this.service.listar();
   }
 
-}
+}*/
 
 
-/** Teste
- * export class ProdutoComponent implements OnInit{
- * 
- *    listarProduto: Produto[] = [];
- *    
-*     constructor(
-*         private service: ProdutoService,
-*         private router: Router     
-*     ){}
-*     
-*     ngOnInit(): void {
+
+ export class ProdutoComponent implements OnInit{
+ 
+    listaProduto: Produto[] = [];
+    
+    constructor(
+         private service: ProdutoService,
+      private router: Router     
+   ){}
+    
+     ngOnInit(): void {
         this.service.listar().subscribe((produto)=>{
           this.listaProduto = produto;
         });      
@@ -45,11 +45,11 @@ export class ProdutoComponent implements OnInit{
           })
         }
       }
-*   
- * 
- * 
- * 
- * }
- * 
- * 
- */
+  
+  
+  
+  
+  }
+  
+  
+ 
