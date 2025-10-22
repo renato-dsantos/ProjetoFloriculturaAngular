@@ -28,7 +28,7 @@ export class ProdutoService{
   
     /*Editar produto*/
      editar(produto: Produto): Observable<Produto>{
-       const url = `${this.API}/$produto.id`
+       const url = `${this.API}/${produto.id}`
       return this.http.put<Produto>(url, produto)
      }
      

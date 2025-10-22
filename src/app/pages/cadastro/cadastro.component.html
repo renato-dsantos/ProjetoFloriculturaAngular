@@ -14,8 +14,8 @@
       <div class="formulario">
         <h2>Cadastro de produto</h2>
         <button type="button" routerLink="/produto">Cancelar</button>
-        <button type="submit" href="#">Salvar</button>
-        <!--<button (click)="submeter()">Salvar</button> teste-->
+        <!--*<button type="submit" href="#">Salvar</button>-->
+        <button (click)="submeter()">Salvar</button>
 
         <label for="idProd">Código do produto</label>
         <input type="number" id="idProd" placeholder="Código do produto" [(ngModel)]="produto.id" required>

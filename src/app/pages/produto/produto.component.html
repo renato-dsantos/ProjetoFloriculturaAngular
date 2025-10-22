@@ -15,7 +15,7 @@
 
 			<input type="search" id="txtBuscarProd" placeholder="Buscar produto">
 
-			<button class="btncadastrar" type="button" href="cadastro.html" routerLink="/cadastro">Cadastrar</button>
+			<button class="btncadastrar" type="button" routerLink="/cadastro">Cadastrar</button>
 
 
 
@@ -40,7 +40,7 @@
 									<td>{{produto.preco}}</td>
 									<td>{{produto.quantidade}}</td>
 									<td>
-										<button class="btneditar" [routerLink]="['cadastro', produto.id]">Editar</button>
+										<button class="btneditar" [routerLink]="['alterar', produto.id]">Editar</button>
 										<button class="btnexcluir" (click)="excluir(produto.id!)">Excluir</button>
 									</td>
 								}
