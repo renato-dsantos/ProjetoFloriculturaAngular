@@ -9,47 +9,29 @@ import { ProdutoService } from '../../core/services/produto.service';
   templateUrl: './produto.component.html',
   styleUrl: './produto.component.css'
 })
-/*export class ProdutoComponent implements OnInit{
-[x: string]: any;
+export class ProdutoComponent implements OnInit {
 
-  listarProduto: Produto[] = [];
-  constructor(private service: ProdutoService){}
+  listaProduto: Produto[] = [];
+
+  constructor(
+    private service: ProdutoService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
-    this.listarProduto = this.service.listar();
+    this.service.listar().subscribe((produto) => {
+      this.listaProduto = produto;
+    });
   }
 
-}*/
-
-
-
- export class ProdutoComponent implements OnInit{
- 
-    listaProduto: Produto[] = [];
-    
-    constructor(
-         private service: ProdutoService,
-      private router: Router     
-   ){}
-    
-     ngOnInit(): void {
-        this.service.listar().subscribe((produto)=>{
-          this.listaProduto = produto;
-        });      
-      }
-
-      excluir(id:number){
-        if(id){
-          this.service.excluir(id).subscribe(() =>{
-              window.location.reload()
-          })
-        }
-      }
-  
-  
-  
-  
+  excluir(id: number) {
+    if (id) {
+      this.service.excluir(id).subscribe(() => {
+        window.location.reload()
+      })
+    }
   }
-  
-  
- 
+
+}
+
+

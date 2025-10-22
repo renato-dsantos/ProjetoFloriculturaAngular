@@ -6,13 +6,10 @@ import { Observable } from 'rxjs/internal/Observable';
 @Injectable({
   providedIn: 'root'
 })
-
-
-
-  export class ProdutoService{
+export class ProdutoService{
   private readonly API = 'http://localhost:3000/produto'
   
-  constructor(private http: HttpClient) {}
+  constructor(private http:HttpClient) {}
   
      /*Listarproduto*/
      listar(): Observable<Produto[]>{
