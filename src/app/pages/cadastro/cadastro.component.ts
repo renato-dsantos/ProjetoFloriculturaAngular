@@ -39,11 +39,11 @@ export class CadastroComponent {
       submeter(){
         if(this.produtoId){
            this.service.editar(this.produto).subscribe(() =>{
-               this.router.navigate(['/produto'])
+               this.router.navigate(['produto'])
            })
          }else{
             this.service.incluir(this.produto).subscribe(()=>{
-              this.router.navigate(['/produtos'])
+              this.router.navigate(['produto'])
             }
             )
          }

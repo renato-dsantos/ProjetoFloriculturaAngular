@@ -18,26 +18,26 @@
         <button (click)="submeter()">Salvar</button>
 
         <label for="idProd">Código do produto</label>
-        <input type="number" id="idProd" placeholder="Código do produto" [(ngModel)]="produto.id" required>
+        <input type="text" id="idProd" name="idProd" placeholder="Código do produto" [(ngModel)]="produto.id" required>
 
         <label for="txtNomeProd">Nome</label>
-        <input type="text" id="txtNomeProd" placeholder="Nome do produto" [(ngModel)]="produto.nome" required>
+        <input type="text" id="txtNomeProd" name="txtNomeProd" placeholder="Nome do produto" [(ngModel)]="produto.nome" required>
 
         <label for="txtTipoProd">Tipo</label>
-        <input type="text" id="txtTipoProd" placeholder="Tipo do produto" [(ngModel)]="produto.tipo" required><br>
+        <input type="text" id="txtTipoProd" name="txtTipoProd" placeholder="Tipo do produto" [(ngModel)]="produto.tipo" required><br>
 
         <label for="txtPreco">Preço</label>
-        <input type="number" id="txtPreco" placeholder="Preço do pedido" [(ngModel)]="produto.preco"required>
+        <input type="number" id="txtPreco" name="txtPreco" placeholder="Preço do pedido" [(ngModel)]="produto.preco"required>
 
         <label for="txtQuantd">Quantidade</label>
-        <input type="number" id="txtQuantd" placeholder="Quantidade" [(ngModel)]="produto.quantidade" required>
+        <input type="number" id="txtQuantd" name="txtQuantd" placeholder="Quantidade" [(ngModel)]="produto.quantidade" required>
 
         <label for="prodImg">Imagem do produto</label>
         <input type="file" id="prodImg" accept="image/*">
         <br>
 
         <label for="txtDescricaoProd">Descrição do produto:</label> <br>
-        <textarea id="txtDescricaoProd" name="descricao" placeholder="Descrição do produto.." style="resize: none" [(ngModel)]="produto.descricao" required></textarea>
+        <textarea id="txtDescricaoProd" name="txtDescricaoProd" placeholder="Descrição do produto.." style="resize: none" [(ngModel)]="produto.descricao" required></textarea>
 
       </div>
 

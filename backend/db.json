@@ -10,11 +10,59 @@
     },
     {
       "id": "2",
-      "nome": "Buquê cravo",
-      "tipo": "Flores",
-      "preco": 20,
+      "nome": "rosa",
+      "tipo": "flor",
+      "preco": 8,
+      "quantidade": 8,
+      "descricao": "flores"
+    },
+    {
+      "id": "3",
+      "nome": "rosa",
+      "tipo": "flor",
+      "preco": 1,
       "quantidade": 2,
-      "descricao": "Flores cravo"
+      "descricao": "Flor"
+    },
+    {
+      "id": "4",
+      "nome": "Bombom",
+      "tipo": "Doce",
+      "preco": 6,
+      "quantidade": 1,
+      "descricao": "Bombom"
+    },
+    {
+      "id": "5",
+      "nome": "Bombom",
+      "tipo": "Doce",
+      "preco": 5,
+      "quantidade": 2,
+      "descricao": "Bombom"
+    },
+    {
+      "id": "6",
+      "nome": "Buquê",
+      "tipo": "flor",
+      "preco": 10,
+      "quantidade": 3,
+      "descricao": "Buquê"
+    },
+    {
+      "id": "7",
+      "nome": "Bombom",
+      "tipo": "Doce",
+      "preco": 9,
+      "quantidade": 1,
+      "descricao": "Bobom"
+    },
+    {
+      "id": "8",
+      "nome": "Buquê",
+      "tipo": "flor",
+      "preco": 2,
+      "quantidade": 1,
+      "descricao": "Bombom"
     }
   ]
 }

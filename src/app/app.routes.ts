@@ -33,7 +33,13 @@ export const routes: Routes = [
           component: FavoritoComponent,
           title:'favorito'
 
-        }
+        },
+        {
+        path: 'produto/alterar/:id',
+        component: CadastroComponent,
+        title: 'Produto - Alterar',
+    }
+
 
 
 ];
