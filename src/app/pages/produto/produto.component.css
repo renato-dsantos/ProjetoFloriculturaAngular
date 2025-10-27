@@ -41,6 +41,7 @@ img{
 
 .produto{
 	display:block;
+	overflow: auto;/*Teste rolangem da tela*/
 	height: 50vh;
 	background-color: white;
 	border-style: solid;
@@ -75,7 +76,10 @@ button{
 	
 }
    
-  
+  .tabela {
+	width: 100%;
+	overflow-x: auto; /* teste de rolagem */
+}
     
 table{
 	
