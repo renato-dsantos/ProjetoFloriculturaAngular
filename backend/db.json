@@ -64,5 +64,25 @@
       "quantidade": 1,
       "descricao": "Bombom"
     }
+  ],
+
+  "usuario":[
+    {
+      "nome":"Renato",
+      "sobrenome":"Santos",
+      "email":"",
+      "cpf":"",
+      "datadenascimento":"",
+      "telefone":"",
+      "senha":"",
+      "confirmarsenha":"",
+      "rua":"",
+      "numero":"",
+      "complemento":"",
+      "bairro":"",
+      "cidade":"",
+      "cep":""
+    }
+
   ]
 }

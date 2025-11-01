@@ -22,7 +22,10 @@ export class LoginComponent {
       if (this.login == 'admin' && this.senha == '123') {
         alert(`Bem-vindo ${this.login} !`)
         this.router.navigate(['/produto'])
-      } else {
+      } else if(this.login == 'usuario' && this.senha == '123'){
+        alert(`Bem-vindo ${this.login} !`)
+        this.router.navigate(['/favorito'])       
+      }else{
         alert(`Dados Inválidos`)
       }
     }
