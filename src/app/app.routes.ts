@@ -5,7 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { FavoritoComponent } from './pages/favorito/favorito.component';
 import { CadastrousuarioComponent } from './pages/cadastrousuario/cadastrousuario.component';
-
+import { EsqueceusenhaComponent } from './pages/esqueceusenha/esqueceusenha.component';
 export const routes: Routes = [
 
         {
@@ -44,7 +44,11 @@ export const routes: Routes = [
         path: 'cadastrousuario',
         component: CadastrousuarioComponent,
         title: 'Cadastro-usuario',
-    }
+    },
+    { path: 'esqueceusenha',
+       component: EsqueceusenhaComponent,
+      title: 'Esqueceu-senha',
+     }
 
 
 
