@@ -3,54 +3,178 @@
 
     <div class="conteiner">
       
-      <form>           
+      <form [formGroup]="formulario" (ngSubmit)="onSubmit()" novalidate>           
           <h3>Dados Pessoais</h3>  
           <label for="txtNome">Nome</label>
-          <input type="text" id="txtNome" name="txtNome" placeholder="Nome" required>
+          <input type="text" id="txtNome" name="txtNome" formControlName="nome" placeholder="Nome" required>
+           @if (formulario.get('nome')?.hasError('required')) {
+            <p>Nome é obrigatório</p>
+           }
+            @if (formulario.get('nome')?.hasError('minlength')) {
+            <p>Mínimo 8 caracteres</p>
+           }
+           
 
           <label for="txtSobrenome">Sobrenome</label>
-          <input type="text" id="txtSobrenome" name="txtSobrenome" placeholder="Sobrenome" required>
+          <input type="text" id="txtSobrenome" name="txtSobrenome" formControlName="sobrenome" placeholder="Sobrenome" required>
+            @if (formulario.get('sobrenome')?.hasError('required')) {
+            <p>Sobrenome é obrigatório</p>
+           }
+            @if (formulario.get('sobrenome')?.hasError('minlength')) {
+            <p>Mínimo 3 caracteres</p>
+           }
+           
+
 
           <label for="txtEmail">E-mail</label>
-          <input type="email" id="txtEmail" name="txtEmail" placeholder="emai@email.com" required>
+          <input type="email" id="txtEmail" name="txtEmail" formControlName="email" placeholder="emai@email.com" required>
+           @if (formulario.get('email')?.hasError('required')) {
+            <p>Email é obrigatório</p>
+           }
+            @if (formulario.get('email')?.hasError('minlength')) {
+            <p>Mínimo 3 caracteres</p>
+           }
+
+           @if (formulario.get('email')?.hasError('email')) {
+            <p>E-mail inválido</p>
+           }
+
   
           <label for="txtCPF">CPF</label>
-          <input type="txtCPF" id="txtCPF" name="txtCPF" placeholder="CPF" required>
+          <input type="txtCPF" id="txtCPF" name="txtCPF" formControlName="cpf" placeholder="CPF" required>
+          @if (formulario.get('cpf')?.hasError('required')) {
+            <p>CPF é obrigatório</p>
+           }
+            @if (formulario.get('cpf')?.hasError('minlength')) {
+            <p>Mínimo 3 caracteres</p>
+           }
+
+            @if (formulario.get('cpf')?.hasError('maxlength')) {
+            <p>Máximo 11 caracteres</p>
+           }
+
   
           <label for="dataNascimento">Data de Nascimento</label>
-          <input type="date" id="dataNascimento" name="dataNascimento" placeholder="Data de Nascimento" required>
+          <input type="date" id="dataNascimento" name="dataNascimento" formControlName="datanascimento" placeholder="Data de Nascimento" required>
+           @if (formulario.get('datanascimento')?.hasError('required')) {
+            <p>Data de nascimento é obrigatório</p>
+           }
+            
 
           <label for="telefone">Telefone</label>
-          <input type="tel" id="telefone" name="telefone" placeholder="(DD)12345-6789" required>
+          <input type="tel" id="telefone" name="telefone" formControlName="telefone" placeholder="(DD)12345-6789" required>
+           @if (formulario.get('telefone')?.hasError('required')) {
+            <p>Telefone é obrigatório</p>
+           }
+            @if (formulario.get('telefone')?.hasError('minlength')) {
+            <p>Mínimo 3 caracteres</p>
+           }
+
+            @if (formulario.get('telefone')?.hasError('maxlength')) {
+            <p>Máximo 11 caracteres</p>
+           }
 
           <label for="senha">Senha</label>
-          <input type="password" id="senha" name="senha" placeholder="Minimo 8 caracteres" minlength="8" required>
+          <input type="password" id="senha" name="senha" formControlName="senha"  placeholder="Minimo 8 caracteres" minlength="8" required>
+          @if (formulario.get('senha')?.hasError('required')) {
+            <p>Senha é obrigatório</p>
+           }
+            @if (formulario.get('senha')?.hasError('minlength')) {
+            <p>Mínimo 8 caracteres</p>
+           }
+
+            @if (formulario.get('senha')?.hasError('maxlength')) {
+            <p>Máximo 12 caracteres</p>
+           }
 
           <label for="confirmarSenha">Confirmar senha</label>
-          <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Minimo 8 caracteres" minlength="8" required>
+          <input type="password" id="confirmarSenha" name="confirmarSenha"  formControlName="confirmarsenha" placeholder="Minimo 8 caracteres" minlength="8" required>
+          @if (formulario.get('confirmarsenha')?.hasError('required')) {
+            <p>Senha é obrigatório</p>
+           }
+            @if (formulario.get('confirmarsenha')?.hasError('minlength')) {
+            <p>Mínimo 8 caracteres</p>
+           }
+
+            @if (formulario.get('confirmarsenha')?.hasError('maxlength')) {
+            <p>Máximo 12 caracteres</p>
+           }
             
           <h3>Endereço</h3> 
           
 
           <label for="txtRua">Rua</label>
-          <input type="text" id="txtRua" name="txrua"  placeholder="Rua" required>
+          <input type="text" id="txtRua" name="txrua" formControlName="rua" placeholder="Rua" required>
+          @if (formulario.get('rua')?.hasError('required')) {
+            <p>Rua é obrigatório</p>
+           }
+            @if (formulario.get('rua')?.hasError('minlength')) {
+            <p>Mínimo 8 caracteres</p>
+           }
+
+            @if (formulario.get('rua')?.hasError('maxlength')) {
+            <p>Máximo 20 caracteres</p>
+           }
 
           <label for="numero">Número</label>
-          <input type="number" id="numero" name="numero"  placeholder="Número" required> 
+          <input type="number" id="numero" name="numero" formControlName="numero"  placeholder="Número" required>
+          
+          @if (formulario.get('numero')?.hasError('required')) {
+            <p>Número é obrigatório</p>
+           }
+            @if (formulario.get('numero')?.hasError('minlength')) {
+            <p>Mínimo 2 caracteres</p>
+           }
+
+            @if (formulario.get('numero')?.hasError('maxlength')) {
+            <p>Máximo 5 caracteres</p>
+           }
           
           <label for="txtComplemento">Complemento</label>
           <input type="text" id="complemento" name="complemento"  placeholder="complemento" required>
           
+          
           <label for="txtBairro">Bairro</label>
-          <input type="text" id="txtBairro" name="txtBairro" placeholder="Bairro" required>
+          <input type="text" id="txtBairro" name="txtBairro" formControlName="bairro" placeholder="Bairro" required>
+           @if (formulario.get('bairro')?.hasError('required')) {
+            <p>Bairro é obrigatório</p>
+           }
+            @if (formulario.get('bairro')?.hasError('minlength')) {
+            <p>Mínimo 2 caracteres</p>
+           }
+
+            @if (formulario.get('bairro')?.hasError('maxlength')) {
+            <p>Máximo 5 caracteres</p>
+           }
           
           <label for="txtCidade">Cidade</label>
-          <input type="text" id="txtCidade" name="txtCidade" placeholder="Cidade" required> 
+          <input type="text" id="txtCidade" name="txtCidade" formControlName="cidade" placeholder="Cidade" required> 
+          @if (formulario.get('cidade')?.hasError('required')) {
+            <p>Cidade é obrigatório</p>
+           }
+            @if (formulario.get('cidade')?.hasError('minlength')) {
+            <p>Mínimo 2 caracteres</p>
+           }
+
+            @if (formulario.get('cidade')?.hasError('maxlength')) {
+            <p>Máximo 5 caracteres</p>
+           }
 
           <label for="cep">CEP</label>
-          <input type="number" id="cep" name="cep" placeholder="CEP" required>
+          <input type="number" id="cep" name="cep" formControlName="cep" placeholder="CEP" required>
+            @if (formulario.get('cep')?.hasError('required')) {
+            <p>CEP é obrigatório</p>
+           }
+            @if (formulario.get('cep')?.hasError('minlength')) {
+            <p>Mínimo 2 caracteres</p>
+           }
+
+            @if (formulario.get('cep')?.hasError('maxlength')) {
+            <p>Máximo 5 caracteres</p>
+           }
+
         <div class="botao">
-            <button type="submit">Cadastrar</button> 
+            <button type="submit" [disabled]="formulario.invalid">Cadastrar</button> 
             <button routerLink="">Cancelar</button>  
         </div>    
   
