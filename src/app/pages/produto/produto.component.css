@@ -24,9 +24,11 @@ body {
 	display: flex;
 }
 
-img{
+
+ img{
  	display: block;
  	width: 20%;
+	cursor: pointer;
 }
 
 .telaCentral{
