@@ -12,7 +12,7 @@ main {
     scroll-margin-top: 100px
 }
 
-main .container {
+.container {
     width: 100%;
     height: 100vh;
 
@@ -26,7 +26,7 @@ main .container {
     /* border: solid black; */
 }
 
-main .container nav {
+.container nav {
     width: 100%;
 
     display: flex;
@@ -35,7 +35,7 @@ main .container nav {
     gap: 54px;    
 }
 
-main .container nav div{
+.container nav div{
     width: 220px;
     height: 87px;
 
@@ -45,7 +45,7 @@ main .container nav div{
     box-shadow: 3px 3px 8px black; 
 }
 
-main .container nav div a{
+.container nav div a{
     width: 100%;
     height: 100%;
 
@@ -58,7 +58,7 @@ main .container nav div a{
     color: rgb(0, 0, 0);
 }
 
-main .container .banner{
+.container .banner{
     height: 70%;
 }
 
@@ -146,4 +146,16 @@ main .bloco img{
 
 .infos .infobloco h1{
     font-size: 15px;
+}
+
+footer{
+    text-align: center;
+    background-color: #F0F0F0;
+}
+
+.footer-infos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
