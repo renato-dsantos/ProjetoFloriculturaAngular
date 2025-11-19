@@ -35,7 +35,7 @@ main {
     /* border: solid black 1px; */
 }
 
-.login-form {
+.formularioLogin {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -63,7 +63,7 @@ main {
     /* border: solid rgb(245, 0, 0) 1px; */
 }
 
-.login-form input {
+input {
     width: 100%;
     border: none;
     padding: 10px;
@@ -84,7 +84,7 @@ main {
     /* border: solid rgb(21, 255, 0) 1px; */
 }
 
-.btn {
+button {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -110,4 +110,9 @@ main {
     display: block;
 }
 
+p{
+    display: block;
+    color: red;
+    font-size: 10px;
+}
 

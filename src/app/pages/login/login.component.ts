@@ -1,37 +1,60 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  imports: [RouterModule,FormsModule],
+  imports: [RouterModule, FormsModule, ReactiveFormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
 
-  titulo = 'Faça seu Login!'
-  login = ''
+  email = ''
   senha = ''
   botaoDesabilitado: boolean = true;
+
   constructor(private router: Router) { }
 
-  onBotaoClicado() {
-    if (this.login.trim() !== '' && this.senha.trim() !== '') {
+  formularioLogin = new FormGroup({
+    email: new FormControl('', [Validators.required, Validators.minLength(3),Validators.email]),
+    senha: new FormControl('', [Validators.required, Validators.minLength(8), Validators.maxLength(12)])
+  })
 
-      if (this.login == 'admin' && this.senha == '123') {
-        alert(`Bem-vindo ${this.login} !`)
-        this.router.navigate(['/produto'])
-      } else if(this.login == 'usuario' && this.senha == '123'){
-        alert(`Bem-vindo ${this.login} !`)
-        this.router.navigate(['/favorito'])       
-      }else{
-        alert(`Dados Inválidos`)
+  onSubmit() {
+
+
+
+    if (this.formularioLogin.valid) {
+      alert('Formulário enviado com sucesso!\n' + JSON.stringify(this.formularioLogin.value));
+
+      const email = this.formularioLogin.get("email")?.value!
+      const senha = this.formularioLogin.get("senha")?.value!
+
+      // console.log("email: " + this.formularioLogin.get("email")?.value)
+      // console.log("senha: " + this.senha)
+
+      if (email.trim() !== '' && senha.trim() !== '') {
+
+        if (email == 'admin@admin' && senha == '12345678') {
+          this.router.navigate(['/produto'])
+        } else if (email == 'usuario@usuario' && senha == '12345678') {
+          alert(`Bem-vindo ${email} !`)
+          this.router.navigate(['/favorito'])
+        } else {
+          alert(`Dados Inválidos`)
+        }
+      } else {
+        alert(`Preencha ambos os campos!`)
       }
-    }
-    else {
-      alert(`Preencha ambos os campos!`)
-    }
+
+
+
+
+
+    }//if
+
   }
+
 
 }

@@ -3,49 +3,46 @@
       <div class="container">
         <img src="images/logo.svg" alt="Logo Jardim Real" class="logo" />
   
-        <form class="login-form">
-  
-          <h1 class="title">Login</h1>
-  
-          <div class="sla">
-  
-            <div class="entradas">
-              <div>
-                <label for="email">Login</label><br>
-                    <input class="input-simples" id="email" name="email" type="email" [(ngModel)]="login"
-                    placeholder="Digite seu email"
-                  />
-              </div>
-  
-              <div>
-               <label for="input-senha">Senha</label><br>
-                    <input class="input-simples" id="input-senha" name="input-senha" type="password" 
-                    [(ngModel)]="senha"
-                    placeholder="Digite sua senha"
-                    />
+         <div class="sla">
+         <form [formGroup]= "formularioLogin" (ngSubmit)="onSubmit()" novalidate>
+        
+                   <label for="email">Login</label><br>
+                    <input class="input-simples" id="email" name="email" formControlName="email" type="email"  placeholder="Digite seu email"/>
+                    @if (formularioLogin.get('email')?.hasError('required')) {
+                            <p>Usuário é obrigatório</p>
+                            }                            
 
-              </div>
-            </div>
+             
   
-  
-  
-            <div class="actions">
-              <button class="input-submeter" (disabled)="botaoDesabilitado" (click)="onBotaoClicado()">
-                Entrar
-                </button>
-  
+            
+               <label for="senha">Senha</label><br>
+                    <input class="senha" id="senha" name="senha" formControlName="senha" type="password"  placeholder="Digite sua senha"/>
+                     @if (formularioLogin.get('senha')?.hasError('required')) {
+                            <p>Digite a senha</p>
+                            }  
+
+              
+                        
+            
+                <button id="btn" color="primary" type="submit"[disabled]="formularioLogin.invalid">Enviar</button>
+
+
+           
+            </form> 
+
               <div class="links">
                 <a routerLink="/esqueceusenha">Esqueceu a senha ?</a>
                 <span>ou</span>
                 <a routerLink="/cadastrousuario">Criar conta</a>
               </div>
-  
+             </div>   
+
+            
             </div>
-          </div>
-        </form>
+          
   
-        <p id="mensagem"></p>
-      </div>
+       
+      
     </main>
-    <script src="/src/scripts/login.js"></script>
+    
   </body>
